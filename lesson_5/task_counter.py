@@ -40,5 +40,5 @@ class DigitalCounter:
             raise Exception(f'Достигнуто максимальное значение счетчика "{self.end}".')
 
     def get_current_value(self):
-        """Возвращает текущее значение счетчика."""
+        """Возвращает текущее значение счетчика"""
         return self.current
