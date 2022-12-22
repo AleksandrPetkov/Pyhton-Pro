@@ -24,6 +24,8 @@ class DigitalCounter:
         self.start = start
         self.end = end
         self.current = current
+        if self.current is None:
+            self.current = self.start
 
     def increase(self):
         """
@@ -31,10 +33,7 @@ class DigitalCounter:
 
         При достижении верхней границы счетчика, вызывается ошибка.
         """
-        if self.current is None:
-            self.current = self.start
-            self.current += 1
-        elif self.current < self.end:
+        if self.current < self.end:
             self.current += 1
         else:
             raise Exception(f'Достигнуто максимальное значение счетчика "{self.end}".')
@@ -42,3 +41,5 @@ class DigitalCounter:
     def get_current_value(self):
         """Возвращает текущее значение счетчика"""
         return self.current
+
+
