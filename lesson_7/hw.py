@@ -12,7 +12,7 @@ def home_page():
 @app1.route('/avr_data')
 def average_data():
 
-    with open('hw.csv', encoding='utf-8') as f:
+    with open('hw1.csv', encoding='utf-8') as f:
         result = convert_data(f.read())
         return render_template('avr_data.html', title='Average data', content=result)
 
